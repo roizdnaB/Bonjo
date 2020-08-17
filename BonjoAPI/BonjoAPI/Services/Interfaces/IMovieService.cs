@@ -11,7 +11,7 @@ namespace BonjoAPI.Services.Interfaces
 
         MovieEntity Create(MovieEntity movie);
 
-        MovieEntity Update(MovieEntity movie);
+        void Update(MovieEntity movie);
 
         void Delete(int id);
     }
