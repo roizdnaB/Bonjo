@@ -6,6 +6,7 @@ using BonjoAPI.Others;
 using BonjoAPI.Services.Interfaces;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 using System;
 using System.Collections.Generic;
@@ -24,11 +25,11 @@ namespace BonjoAPI.Controllers
         private readonly IMapper mapper;
         private readonly AppSettings appSettings;
 
-        public UsersController(IUserService userService, IMapper mapper, AppSettings appSettings)
+        public UsersController(IUserService userService, IMapper mapper, IOptions<AppSettings> appSettings)
         {
             this.userService = userService;
             this.mapper = mapper;
-            this.appSettings = appSettings;
+            this.appSettings = appSettings.Value;
         }
 
         [AllowAnonymous]
