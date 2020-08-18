@@ -15,7 +15,7 @@ namespace BonjoAPI.Others
 
         protected override void OnConfiguring(DbContextOptionsBuilder options)
         {
-            options.UseSqlite(configuration.GetConnectionString("BonjoAPIDatabase"));
+            options.UseSqlite(@"Data source=data.db;");
         }
 
         public DbSet<UserEntity> Users { get; set; }
