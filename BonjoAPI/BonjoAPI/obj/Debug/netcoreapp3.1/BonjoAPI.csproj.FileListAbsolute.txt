@@ -67,3 +67,5 @@ D:\Bonjo\BonjoAPI\BonjoAPI\bin\Debug\netcoreapp3.1\runtimes\win-arm\native\e_sql
 D:\Bonjo\BonjoAPI\BonjoAPI\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\e_sqlite3.dll
 D:\Bonjo\BonjoAPI\BonjoAPI\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\e_sqlite3.dll
 D:\Bonjo\BonjoAPI\BonjoAPI\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\e_sqlite3.dll
+D:\Bonjo\BonjoAPI\BonjoAPI\obj\Debug\netcoreapp3.1\BonjoAPI.csproj.CoreCompileInputs.cache
+D:\Bonjo\BonjoAPI\BonjoAPI\obj\Debug\netcoreapp3.1\BonjoAPI.MvcApplicationPartsAssemblyInfo.cache

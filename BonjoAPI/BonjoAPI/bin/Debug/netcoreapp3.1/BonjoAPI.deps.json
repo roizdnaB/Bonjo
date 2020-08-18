@@ -31,6 +31,7 @@
           "Microsoft.EntityFrameworkCore.Design": "3.1.7",
           "Microsoft.EntityFrameworkCore.Sqlite": "3.1.7",
           "Microsoft.EntityFrameworkCore.Tools": "3.1.7",
+          "Microsoft.Extensions.Configuration.Binder": "3.1.7",
           "System.IdentityModel.Tokens.Jwt": "6.7.1",
           "Microsoft.AspNetCore.Antiforgery": "3.1.0.0",
           "Microsoft.AspNetCore.Authentication.Abstractions": "3.1.0.0",
