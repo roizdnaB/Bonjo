@@ -1,8 +1,10 @@
+import { environment } from './../environments/environment';
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 import { AuthenticationService } from './services/authentication.service';
 import { User } from './models/userModel';
-import { Router } from '@angular/router';
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
