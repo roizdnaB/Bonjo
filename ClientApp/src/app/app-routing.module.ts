@@ -8,10 +8,10 @@ import { HomeComponent } from './components/home/home.component';
 import { StartComponent } from './components/start/start.component';
 
 const routes: Routes = [
-  {path: "", component: StartComponent, canActivate: [AuthGuard]},
+  {path: "", component: HomeComponent, canActivate: [AuthGuard]},
   {path: 'sign-in', component: SignInComponent},
   {path: 'sign-up', component: SignUpComponent},
-  {path: 'home', component: HomeComponent},
+  {path: 'start', component: StartComponent},
 
   {path: "**", redirectTo: ""}
 ];
