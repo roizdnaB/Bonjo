@@ -1,4 +1,4 @@
-<p>sign-in</p>
+<h1>Sign In</h1>
 <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
     <label for="username">Username</label>
     <input type="text" formControlName="username" [ngClass]="{ 'is-invalid': submitted && f.username.errors }" />
