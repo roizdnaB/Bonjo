@@ -1,6 +1,6 @@
 ﻿namespace BonjoAPI.Models.Movie
 {
-    public class MovieUpdateModel
+    public class MovieUpdateDTO
     {
         public string Title { get; set; }
     }

@@ -10,14 +10,14 @@ namespace BonjoAPI.Others
         public AutoMapperProfile()
         {
             //User
-            CreateMap<UserEntity, UserModel>();
-            CreateMap<UserRegisterModel, UserEntity>();
-            CreateMap<UserUpdateModel, UserEntity>();
+            CreateMap<UserDTO, UserModel>();
+            CreateMap<UserRegisterDTO, UserDTO>();
+            CreateMap<UserUpdateDTO, UserDTO>();
 
             //Movies
-            CreateMap<MovieEntity, MovieModel>();
-            CreateMap<MovieRegisterModel, MovieEntity>();
-            CreateMap<MovieUpdateModel, MovieEntity>();
+            CreateMap<MovieDTO, MovieModel>();
+            CreateMap<MovieRegisterDTO, MovieDTO>();
+            CreateMap<MovieUpdateDTO, MovieDTO>();
         }
     }
 }

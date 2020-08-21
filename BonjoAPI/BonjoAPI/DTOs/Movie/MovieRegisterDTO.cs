@@ -2,7 +2,7 @@
 
 namespace BonjoAPI.Models.Movie
 {
-    public class MovieRegisterModel
+    public class MovieRegisterDTO
     {
         [Required]
         public string Title { get; set; }

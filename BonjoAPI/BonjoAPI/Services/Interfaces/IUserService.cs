@@ -5,15 +5,15 @@ namespace BonjoAPI.Services.Interfaces
 {
     public interface IUserService
     {
-        UserEntity Authenticate(string username, string password);
+        UserDTO Authenticate(string username, string password);
 
-        IEnumerable<UserEntity> GetAll();
+        IEnumerable<UserDTO> GetAll();
 
-        UserEntity GetById(int id);
+        UserDTO GetById(int id);
 
-        UserEntity Create(UserEntity user, string password);
+        UserDTO Create(UserDTO user, string password);
 
-        void Update(UserEntity user, string password = null);
+        void Update(UserDTO user, string password = null);
 
         void Delete(int id);
     }

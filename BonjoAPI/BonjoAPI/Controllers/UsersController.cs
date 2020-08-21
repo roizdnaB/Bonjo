@@ -34,7 +34,7 @@ namespace BonjoAPI.Controllers
 
         [AllowAnonymous]
         [HttpPost("authenticate")]
-        public IActionResult Authenticate([FromBody] UserAuthModel userAuthModel)
+        public IActionResult Authenticate([FromBody] UserAuthDTO userAuthModel)
         {
             var user = userService.Authenticate(userAuthModel.Username, userAuthModel.Password);
             if (user == null)
@@ -64,9 +64,9 @@ namespace BonjoAPI.Controllers
 
         [AllowAnonymous]
         [HttpPost("register")]
-        public IActionResult Register([FromBody] UserRegisterModel userRegisterModel)
+        public IActionResult Register([FromBody] UserRegisterDTO userRegisterModel)
         {
-            var user = mapper.Map<UserEntity>(userRegisterModel);
+            var user = mapper.Map<UserDTO>(userRegisterModel);
 
             try
             {
@@ -96,9 +96,9 @@ namespace BonjoAPI.Controllers
         }
 
         [HttpPut("{id}")]
-        public IActionResult Update(int id, [FromBody] UserUpdateModel userUpdateModel)
+        public IActionResult Update(int id, [FromBody] UserUpdateDTO userUpdateModel)
         {
-            var user = mapper.Map<UserEntity>(userUpdateModel);
+            var user = mapper.Map<UserDTO>(userUpdateModel);
             user.ID = id;
 
             try

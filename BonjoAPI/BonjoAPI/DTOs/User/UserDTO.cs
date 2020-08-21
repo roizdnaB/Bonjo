@@ -1,6 +1,6 @@
 ﻿namespace BonjoAPI.Entities
 {
-    public class UserEntity
+    public class UserDTO
     {
         public int ID { get; set; }
         public string Username { get; set; }

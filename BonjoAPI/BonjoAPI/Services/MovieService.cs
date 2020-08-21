@@ -17,7 +17,7 @@ namespace BonjoAPI.Services
             this.dataContext = dataContext;
         }
         
-        public MovieEntity Create(MovieEntity movie)
+        public MovieDTO Create(MovieDTO movie)
         {
             if (dataContext.Movies.Any(x => x.Title == movie.Title))
                 throw new Exception($"Movie '{movie.Title}' is already in the database!");
@@ -38,11 +38,11 @@ namespace BonjoAPI.Services
             }
         }
 
-        public IEnumerable<MovieEntity> GetAll() => dataContext.Movies;
+        public IEnumerable<MovieDTO> GetAll() => dataContext.Movies;
 
-        public MovieEntity GetById(int id) => dataContext.Movies.Find(id);
+        public MovieDTO GetById(int id) => dataContext.Movies.Find(id);
 
-        public void Update(MovieEntity movie)
+        public void Update(MovieDTO movie)
         {
             var updateMovie = dataContext.Movies.Find(movie.ID);
 
