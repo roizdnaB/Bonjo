@@ -22,9 +22,9 @@ namespace BonjoAPI.Controllers
         }
 
         [HttpPost("register")]
-        public IActionResult Register([FromBody] MovieRegisterModel movieRegisterModel)
+        public IActionResult Register([FromBody] MovieRegisterDTO movieRegisterModel)
         {
-            var movie = mapper.Map<MovieEntity>(movieRegisterModel);
+            var movie = mapper.Map<MovieDTO>(movieRegisterModel);
 
             try
             {
@@ -54,9 +54,9 @@ namespace BonjoAPI.Controllers
         }
 
         [HttpPut("{id}")]
-        public IActionResult Update(int id, [FromBody] MovieUpdateModel movieUpdateModel)
+        public IActionResult Update(int id, [FromBody] MovieUpdateDTO movieUpdateModel)
         {
-            var movie = mapper.Map<MovieEntity>(movieUpdateModel);
+            var movie = mapper.Map<MovieDTO>(movieUpdateModel);
             movie.ID = id;
 
             try

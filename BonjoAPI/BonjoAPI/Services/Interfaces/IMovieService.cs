@@ -5,13 +5,13 @@ namespace BonjoAPI.Services.Interfaces
 {
     public interface IMovieService
     {
-        IEnumerable<MovieEntity> GetAll();
+        IEnumerable<MovieDTO> GetAll();
 
-        MovieEntity GetById(int id);
+        MovieDTO GetById(int id);
 
-        MovieEntity Create(MovieEntity movie);
+        MovieDTO Create(MovieDTO movie);
 
-        void Update(MovieEntity movie);
+        void Update(MovieDTO movie);
 
         void Delete(int id);
     }

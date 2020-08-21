@@ -16,7 +16,7 @@ namespace BonjoAPI.Services
             this.dataContext = dataContext;
         }
 
-        public UserEntity Authenticate(string username, string password)
+        public UserDTO Authenticate(string username, string password)
         {
             if (string.IsNullOrWhiteSpace(username) || string.IsNullOrWhiteSpace(password))
                 return null;
@@ -31,7 +31,7 @@ namespace BonjoAPI.Services
             return user;
         }
 
-        public UserEntity Create(UserEntity user, string password)
+        public UserDTO Create(UserDTO user, string password)
         {
             if (string.IsNullOrWhiteSpace(password))
                 throw new Exception("Password is required!");
@@ -61,11 +61,11 @@ namespace BonjoAPI.Services
             }
         }
 
-        public IEnumerable<UserEntity> GetAll() => dataContext.Users;
+        public IEnumerable<UserDTO> GetAll() => dataContext.Users;
 
-        public UserEntity GetById(int id) => dataContext.Users.Find(id);
+        public UserDTO GetById(int id) => dataContext.Users.Find(id);
 
-        public void Update(UserEntity user, string password = null)
+        public void Update(UserDTO user, string password = null)
         {
             var updatedUser = dataContext.Users.Find(user.ID);
             if (updatedUser == null)

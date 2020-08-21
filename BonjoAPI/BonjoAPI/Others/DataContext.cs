@@ -18,7 +18,7 @@ namespace BonjoAPI.Others
             options.UseSqlite(@"Data source=data.db;");
         }
 
-        public DbSet<UserEntity> Users { get; set; }
-        public DbSet<MovieEntity> Movies { get; set; }
+        public DbSet<UserDTO> Users { get; set; }
+        public DbSet<MovieDTO> Movies { get; set; }
     }
 }

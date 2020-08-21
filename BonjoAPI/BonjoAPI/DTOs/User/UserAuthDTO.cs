@@ -2,7 +2,7 @@
 
 namespace BonjoAPI.Models.User
 {
-    public class UserAuthModel
+    public class UserAuthDTO
     {
         [Required]
         public string Username { get; set; }
